@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.XR;
 using Unity.VisualScripting;
+using UnityEngine.AI;
 
 public class KickboardController : MonoBehaviour
 {
@@ -18,22 +19,23 @@ public class KickboardController : MonoBehaviour
     {
         wheelColliders = GameObject.FindObjectsOfType<WheelCollider>().ToList();
         rb = GetComponent<Rigidbody>();
-        rb.centerOfMass = centerMess.transform.position;
+        rb.centerOfMass = centerMess.transform.localPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            StartCoroutine("JumpSide360");
+            StartCoroutine(JumpSide360());
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            StartCoroutine("JumpFront360");
+            StartCoroutine(JumpFront360());
         }
+
+
     }
 
     public void Move(float vertical, float horizontal)
@@ -57,7 +59,7 @@ public class KickboardController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, 0);
+        //transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, 0);
     }
     IEnumerator JumpSide360()
     {
