@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee72fabf5bf7c0b448915c4b7f01b835, type: 3}
   m_Name: Default
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
-  Power: 0
-  SteerAngle: 0
+  Name: "\uC2F8\uAD6C\uB824 \uD0A5\uBCF4\uB4DC"
+  Description: "\uD3C9\uBC94\uD55C \uC804\uB3D9 \uD0A5\uBCF4\uB4DC\uC774\uB2E4.\n"
+  Power: 300
+  SteerAngle: 20
+  Battery: 0

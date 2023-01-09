@@ -27,6 +27,10 @@ public class TouchScreen : MonoBehaviour
                 horizontal = -1;
             }
         }
+        if(Input.GetAxisRaw("Horizontal") != 0)
+        {
+            horizontal = Input.GetAxisRaw("Horizontal");
+        }
         kickboardController.Move(1, horizontal);
     }
 }
