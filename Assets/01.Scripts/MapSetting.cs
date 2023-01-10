@@ -896,6 +896,7 @@ public class MapSetting : MonoBehaviour
                 break;
 
         }
+        NavGenerator.instance.Generate();
     }
 
 
