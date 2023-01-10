@@ -24,10 +24,11 @@ public class DeadCamera : MonoBehaviour
         float i = max;
         while(i >= min)
         {
-            i -= 0.05f;
+            i -= 0.035f;
             vcam.m_Lens.FieldOfView = i;
             yield return new WaitForSecondsRealtime(0.01f);
         }
+        Time.timeScale = 0;
     }
     // Update is called once per frame
     void Update()

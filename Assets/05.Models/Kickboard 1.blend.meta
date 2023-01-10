@@ -3,7 +3,67 @@ guid: de79d68f0e920a34cbe9c5a9acee5836
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Battery Case
+    second: {fileID: 2100000, guid: 19c22b5292745374295d51b57b0e8e00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Battery Cover
+    second: {fileID: 2100000, guid: 4838c28b66ea1fc4bb963ea269604e26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Front Axle
+    second: {fileID: 2100000, guid: 913aa1773adee8f49acf1217840e86eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle Bar
+    second: {fileID: 2100000, guid: a82b151326da4974e8fbc0fc31ff1500, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle Bar Extra
+    second: {fileID: 2100000, guid: 14821931c254d384dbca4c46dedb6829, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle Center
+    second: {fileID: 2100000, guid: b749762d0db421d4eb7b33e5bab9fc5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rear Axle
+    second: {fileID: 2100000, guid: 148cc2ed73740cf4b95c02a3f613cf50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rear Wheel Cover
+    second: {fileID: 2100000, guid: dda2d252bffdd7c419466eae748e03c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Steer Rod
+    second: {fileID: 2100000, guid: 8938d88854c51c34fab08ca5eb3d4931, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Steer Supporter
+    second: {fileID: 2100000, guid: 451cd5e13d2c8d545be9a9a95bbf141f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tire
+    second: {fileID: 2100000, guid: c1b06814c19769442b725428766307ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tire.001
+    second: {fileID: 2100000, guid: 8494870b2f2c0544aa98e98094beb35b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
