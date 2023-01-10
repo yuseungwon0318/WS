@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Kickboard")]
 public class KickBoardSO : ScriptableObject
 {
+    [Header("Info")]
     public string Name;
     [Multiline(5)]
     public string Description;
@@ -12,7 +13,12 @@ public class KickBoardSO : ScriptableObject
     [Header("Performance")]
     public float Power; 
     public float SteerAngle;
-    [Tooltip("1초에 얼마")]
-    public float BatteryEfficiency;
-    public float BatterySize;
+    public int BatterySize;
+    [Tooltip("1초에 닳는 양\nLower is better")]
+    public int BatteryEfficiency;
+
+    [Header("Visual")]
+    public Color BatteryCase;
+    public Color BatteryCover;
+    public Color FrontAxle;
 }

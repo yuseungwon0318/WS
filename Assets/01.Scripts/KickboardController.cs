@@ -11,28 +11,46 @@ public class KickboardController : MonoBehaviour
     public KickBoardSO Data;
     public GameObject centerMess;
 
+    public int CurrentBatteryState = 0;
+    public bool isDead = false;
     private List<WheelCollider> wheelColliders = new List<WheelCollider>();
     private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
+        isDead = false;
         wheelColliders = GameObject.FindObjectsOfType<WheelCollider>().ToList();
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = centerMess.transform.localPosition;
-    }
+        CurrentBatteryState = Data.BatterySize;
 
+        StartCoroutine(Battery());
+    }
+    IEnumerator Battery()
+    {
+        while (!isDead)
+        {
+            if(CurrentBatteryState - Data.BatteryEfficiency <= 0)
+            {
+                isDead =true;
+            }
+            CurrentBatteryState -= Data.BatteryEfficiency;
+            yield return new WaitForSeconds(1f);
+        }
+
+    }
     // Update is called once per frame
     void Update()
     {
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            StartCoroutine(JumpSide360());
+            //StartCoroutine(JumpSide360());
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            StartCoroutine(JumpFront360());
+            //StartCoroutine(JumpFront360());
         }
 
 
@@ -40,10 +58,8 @@ public class KickboardController : MonoBehaviour
 
     public void Move(float vertical, float horizontal)
     {
-        for (int i = 0; i < wheelColliders.Count; i++)
-        {
-            wheelColliders[i].motorTorque = vertical * Data.Power;
-        }
+
+
         wheelColliders.Where(x => x.name == "F").ToList().ForEach(z =>
         {
             if (horizontal != 0)
@@ -56,6 +72,12 @@ public class KickboardController : MonoBehaviour
             }
             z.steerAngle = Mathf.Clamp(z.steerAngle, -Data.SteerAngle, Data.SteerAngle);
         });
+
+
+        for (int i = 0; i < wheelColliders.Count; i++)
+        {
+            wheelColliders[i].motorTorque = isDead ? 0 : vertical * Data.Power;
+        }
     }
     void FixedUpdate()
     {
