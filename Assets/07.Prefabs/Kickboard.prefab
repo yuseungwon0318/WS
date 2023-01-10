@@ -1440,6 +1440,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Data: {fileID: 11400000, guid: b2f100a840ce80d4391745c1ee3b1bdd, type: 2}
   centerMess: {fileID: 6945299919014951295}
+  DeadEvent:
+    m_PersistentCalls:
+      m_Calls: []
   CurrentBatteryState: 0
   isDead: 0
 --- !u!65 &7828312419355032828
@@ -1466,8 +1469,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.12260025, y: 0.07143772, z: 0.52210826}
-  m_Center: {x: -2.5038607e-11, y: 0.092047565, z: -0.049116053}
+  m_Size: {x: 0.12260025, y: 0.057511233, z: 0.52210826}
+  m_Center: {x: -1.3376344e-10, y: 0.1134005, z: -0.049116056}
 --- !u!114 &7828312419355032830
 MonoBehaviour:
   m_ObjectHideFlags: 0

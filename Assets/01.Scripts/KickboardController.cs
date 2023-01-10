@@ -83,6 +83,7 @@ public class KickboardController : MonoBehaviour
         for (int i = 0; i < wheelColliders.Count; i++)
         {
             wheelColliders[i].motorTorque = isDead ? 0 : vertical * Data.Power;
+            wheelColliders[i].brakeTorque = isDead ? 1000 : 0;
         }
     }
     void FixedUpdate()
