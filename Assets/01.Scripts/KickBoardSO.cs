@@ -21,4 +21,11 @@ public class KickBoardSO : ScriptableObject
     public Color BatteryCase;
     public Color BatteryCover;
     public Color FrontAxle;
+    public Color HandleBar;
+    public Color HandleBarExtra;
+    public Color HandleCenter;
+    public Color RearAxle;
+    public Color RearWheelCover;
+    public Color SteerRod;
+    public Color SteerSupporter;
 }

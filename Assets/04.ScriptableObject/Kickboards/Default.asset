@@ -18,3 +18,6 @@ MonoBehaviour:
   SteerAngle: 20
   BatterySize: 300
   BatteryEfficiency: 25
+  BatteryCase: {r: 0, g: 0, b: 0, a: 0}
+  BatteryCover: {r: 0, g: 0, b: 0, a: 0}
+  FrontAxle: {r: 0, g: 0, b: 0, a: 0}
