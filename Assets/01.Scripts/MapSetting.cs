@@ -52,7 +52,7 @@ public class MapSetting : MonoBehaviour
             case 1:
                 Mfilter.mesh = cornerMesh[0];
                 Mcollider.sharedMesh = Mfilter.mesh;
-                transform.position = new Vector3(30, 0, 0);
+                //transform.localPosition = new Vector3(30, 0, 0);
                 transform.rotation = Quaternion.Euler(-90, -90, 0);
 
                 break;
@@ -77,7 +77,7 @@ public class MapSetting : MonoBehaviour
                         MapManager.Instance.A = false;
                     }
 
-                    transform.position = new Vector3(15, 0, 0);
+                    
                     transform.rotation = Quaternion.Euler(-90, 90, 0);
                 }
                 else
@@ -87,7 +87,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = sideMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 0);
+                    
                     transform.rotation = Quaternion.Euler(-90, 0, 0);
                 }
 
@@ -114,7 +114,7 @@ public class MapSetting : MonoBehaviour
                         MapManager.Instance.B = false;
                     }
 
-                    transform.position = new Vector3(0, 0, 0);
+                    
                     transform.rotation = Quaternion.Euler(-90, 90, 0);
                 }
                 else
@@ -124,7 +124,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = sideMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 0);
+                    
                     transform.rotation = Quaternion.Euler(-90, 0, 0);
                 }
 
@@ -132,7 +132,6 @@ public class MapSetting : MonoBehaviour
             case 4:
                 Mfilter.mesh = cornerMesh[0];
                 Mcollider.sharedMesh = Mfilter.mesh;
-                transform.position = new Vector3(-15, 0, 0);
                 transform.rotation = Quaternion.Euler(-90, 0, 0);
 
                 break;
@@ -156,7 +155,6 @@ public class MapSetting : MonoBehaviour
                         MapManager.Instance.C = false;
                     }
 
-                    transform.position = new Vector3(30, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 0, 0);
                 }
                 else
@@ -166,7 +164,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = sideMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(30, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 270, 0);
                 }
 
@@ -186,7 +183,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[i];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, -90, 0);
                 }
                 else if (left && right && down)
@@ -195,7 +191,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 0, 0);
                 }
                 else if (up && right && down)
@@ -203,7 +198,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 270, 0);
                 }
                 else if (up && left && down)
@@ -211,7 +205,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 90, 0);
                 }
                 else if (up && left && right)
@@ -219,7 +212,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 180, 0);
                 }
                 else if (up && down)
@@ -232,7 +224,6 @@ public class MapSetting : MonoBehaviour
                             Mfilter.mesh = centerMesh[0];
                             Mcollider.sharedMesh = Mfilter.mesh;
 
-                            transform.position = new Vector3(15, 0, 15);
                             transform.rotation = Quaternion.Euler(-90, 180, 0);
                             break;
 
@@ -240,7 +231,6 @@ public class MapSetting : MonoBehaviour
                             Mfilter.mesh = centerMesh[1];
                             Mcollider.sharedMesh = Mfilter.mesh;
 
-                            transform.position = new Vector3(15, 0, 15);
                             transform.rotation = Quaternion.Euler(-90, 180, 0);
                             break;
                     }
@@ -256,7 +246,6 @@ public class MapSetting : MonoBehaviour
                             Mfilter.mesh = centerMesh[0];
                             Mcollider.sharedMesh = Mfilter.mesh;
 
-                            transform.position = new Vector3(15, 0, 15);
                             transform.rotation = Quaternion.Euler(-90, 90, 0);
                             break;
 
@@ -264,7 +253,6 @@ public class MapSetting : MonoBehaviour
                             Mfilter.mesh = centerMesh[1];
                             Mcollider.sharedMesh = Mfilter.mesh;
 
-                            transform.position = new Vector3(15, 0, 15);
                             transform.rotation = Quaternion.Euler(-90, 90, 0);
                             break;
                     }
@@ -274,7 +262,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[6];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 90, 0);
                 }
                 else if (up && right)
@@ -282,7 +269,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[6];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 180, 0);
                 }
                 else if (down && left)
@@ -290,7 +276,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[6];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 0, 0);
                 }
                 else if (down && right)
@@ -298,7 +283,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[6];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 270, 0);
                 }
                 else
@@ -306,7 +290,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[7];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 270, 0);
                 }
 
@@ -329,7 +312,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[i];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, -90, 0);
                 }
                 else if (left && right && down)
@@ -338,7 +320,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 0, 0);
                 }
                 else if (up && right && down)
@@ -346,7 +327,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 270, 0);
                 }
                 else if (up && left && down)
@@ -354,7 +334,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 90, 0);
                 }
                 else if (up && left && right)
@@ -362,7 +341,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 180, 0);
                 }
                 else if (up && down)
@@ -375,7 +353,6 @@ public class MapSetting : MonoBehaviour
                             Mfilter.mesh = centerMesh[0];
                             Mcollider.sharedMesh = Mfilter.mesh;
 
-                            transform.position = new Vector3(0, 0, 15);
                             transform.rotation = Quaternion.Euler(-90, 180, 0);
                             break;
 
@@ -383,7 +360,6 @@ public class MapSetting : MonoBehaviour
                             Mfilter.mesh = centerMesh[1];
                             Mcollider.sharedMesh = Mfilter.mesh;
 
-                            transform.position = new Vector3(0, 0, 15);
                             transform.rotation = Quaternion.Euler(-90, 180, 0);
                             break;
                     }
@@ -399,7 +375,6 @@ public class MapSetting : MonoBehaviour
                             Mfilter.mesh = centerMesh[0];
                             Mcollider.sharedMesh = Mfilter.mesh;
 
-                            transform.position = new Vector3(0, 0, 15);
                             transform.rotation = Quaternion.Euler(-90, 90, 0);
                             break;
 
@@ -407,7 +382,6 @@ public class MapSetting : MonoBehaviour
                             Mfilter.mesh = centerMesh[1];
                             Mcollider.sharedMesh = Mfilter.mesh;
 
-                            transform.position = new Vector3(0, 0, 15);
                             transform.rotation = Quaternion.Euler(-90, 90, 0);
                             break;
                     }
@@ -417,7 +391,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[6];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 90, 0);
                 }
                 else if (up && right)
@@ -425,7 +398,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[6];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 180, 0);
                 }
                 else if (down && left)
@@ -433,7 +405,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[6];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 0, 0);
                 }
                 else if (down && right)
@@ -441,7 +412,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[6];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 270, 0);
                 }
                 else
@@ -449,7 +419,6 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[7];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 270, 0);
                 }
 
@@ -473,7 +442,6 @@ public class MapSetting : MonoBehaviour
                         MapManager.Instance.D = false;
                     }
 
-                    transform.position = new Vector3(-15, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 0, 0);
                 }
                 else
@@ -483,7 +451,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = sideMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(-15, 0, 15);
+                    //transform.localPosition = new Vector3(-15, 0, 15);
                     transform.rotation = Quaternion.Euler(-90, 90, 0);
                 }
 
@@ -508,7 +476,7 @@ public class MapSetting : MonoBehaviour
 
                     }
 
-                    transform.position = new Vector3(30, 0, 30);
+                    //transform.localPosition = new Vector3(30, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 0, 0);
                 }
                 else
@@ -518,7 +486,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = sideMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(30, 0, 30);
+                    //transform.localPosition = new Vector3(30, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 270, 0);
                 }
 
@@ -538,7 +506,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[i];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 30);
+                    //transform.localPosition = new Vector3(15, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, -90, 0);
                 }
                 else if (left && right && down)
@@ -547,7 +515,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 30);
+                    //transform.localPosition = new Vector3(15, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 0, 0);
                 }
                 else if (up && right && down)
@@ -555,7 +523,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 30);
+                    //transform.localPosition = new Vector3(15, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 270, 0);
                 }
                 else if (up && left && down)
@@ -563,7 +531,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 30);
+                    //transform.localPosition = new Vector3(15, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 90, 0);
                 }
                 else if (up && left && right)
@@ -571,7 +539,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 30);
+                    //transform.localPosition = new Vector3(15, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 180, 0);
                 }
                 else if (up && down)
@@ -584,7 +552,7 @@ public class MapSetting : MonoBehaviour
                             Mfilter.mesh = centerMesh[0];
                             Mcollider.sharedMesh = Mfilter.mesh;
 
-                            transform.position = new Vector3(15, 0, 30);
+                            //transform.localPosition = new Vector3(15, 0, 30);
                             transform.rotation = Quaternion.Euler(-90, 180, 0);
                             break;
 
@@ -592,7 +560,7 @@ public class MapSetting : MonoBehaviour
                             Mfilter.mesh = centerMesh[1];
                             Mcollider.sharedMesh = Mfilter.mesh;
 
-                            transform.position = new Vector3(15, 0, 30);
+                            //transform.localPosition = new Vector3(15, 0, 30);
                             transform.rotation = Quaternion.Euler(-90, 180, 0);
                             break;
                     }
@@ -608,7 +576,7 @@ public class MapSetting : MonoBehaviour
                             Mfilter.mesh = centerMesh[0];
                             Mcollider.sharedMesh = Mfilter.mesh;
 
-                            transform.position = new Vector3(15, 0, 30);
+                            //transform.localPosition = new Vector3(15, 0, 30);
                             transform.rotation = Quaternion.Euler(-90, 90, 0);
                             break;
 
@@ -616,7 +584,7 @@ public class MapSetting : MonoBehaviour
                             Mfilter.mesh = centerMesh[1];
                             Mcollider.sharedMesh = Mfilter.mesh;
 
-                            transform.position = new Vector3(15, 0, 30);
+                            //transform.localPosition = new Vector3(15, 0, 30);
                             transform.rotation = Quaternion.Euler(-90, 90, 0);
                             break;
                     }
@@ -626,7 +594,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[6];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 30);
+                    //transform.localPosition = new Vector3(15, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 90, 0);
                 }
                 else if (up && right)
@@ -634,7 +602,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[6];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 30);
+                    //transform.localPosition = new Vector3(15, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 180, 0);
                 }
                 else if (down && left)
@@ -642,7 +610,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[6];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 30);
+                    //transform.localPosition = new Vector3(15, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 0, 0);
                 }
                 else if (down && right)
@@ -650,7 +618,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[6];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 30);
+                    //transform.localPosition = new Vector3(15, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 270, 0);
                 }
                 else
@@ -658,7 +626,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[7];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 30);
+                    //transform.localPosition = new Vector3(15, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 270, 0);
                 }
 
@@ -679,7 +647,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[i];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 30);
+                    //transform.localPosition = new Vector3(0, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, -90, 0);
                 }
                 else if (left && right && down)
@@ -688,7 +656,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 30);
+                    //transform.localPosition = new Vector3(0, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 0, 0);
                 }
                 else if (up && right && down)
@@ -696,7 +664,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 30);
+                    //transform.localPosition = new Vector3(0, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 270, 0);
                 }
                 else if (up && left && down)
@@ -704,7 +672,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 30);
+                    //transform.localPosition = new Vector3(0, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 90, 0);
                 }
                 else if (up && left && right)
@@ -712,7 +680,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 30);
+                    //transform.localPosition = new Vector3(0, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 180, 0);
                 }
                 else if (up && down)
@@ -725,7 +693,7 @@ public class MapSetting : MonoBehaviour
                             Mfilter.mesh = centerMesh[0];
                             Mcollider.sharedMesh = Mfilter.mesh;
 
-                            transform.position = new Vector3(0, 0, 30);
+                            //transform.localPosition = new Vector3(0, 0, 30);
                             transform.rotation = Quaternion.Euler(-90, 180, 0);
                             break;
 
@@ -733,7 +701,7 @@ public class MapSetting : MonoBehaviour
                             Mfilter.mesh = centerMesh[1];
                             Mcollider.sharedMesh = Mfilter.mesh;
 
-                            transform.position = new Vector3(0, 0, 30);
+                            //transform.localPosition = new Vector3(0, 0, 30);
                             transform.rotation = Quaternion.Euler(-90, 180, 0);
                             break;
                     }
@@ -749,7 +717,7 @@ public class MapSetting : MonoBehaviour
                             Mfilter.mesh = centerMesh[0];
                             Mcollider.sharedMesh = Mfilter.mesh;
 
-                            transform.position = new Vector3(0, 0, 30);
+                            //transform.localPosition = new Vector3(0, 0, 30);
                             transform.rotation = Quaternion.Euler(-90, 90, 0);
                             break;
 
@@ -757,7 +725,7 @@ public class MapSetting : MonoBehaviour
                             Mfilter.mesh = centerMesh[1];
                             Mcollider.sharedMesh = Mfilter.mesh;
 
-                            transform.position = new Vector3(0, 0, 30);
+                            //transform.localPosition = new Vector3(0, 0, 30);
                             transform.rotation = Quaternion.Euler(-90, 90, 0);
                             break;
                     }
@@ -767,7 +735,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[6];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 30);
+                    //transform.localPosition = new Vector3(0, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 90, 0);
                 }
                 else if (up && right)
@@ -775,7 +743,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[6];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 30);
+                    //transform.localPosition = new Vector3(0, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 180, 0);
                 }
                 else if (down && left)
@@ -783,7 +751,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[6];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 30);
+                    //transform.localPosition = new Vector3(0, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 0, 0);
                 }
                 else if (down && right)
@@ -791,7 +759,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[6];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 30);
+                    //transform.localPosition = new Vector3(0, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 270, 0);
                 }
                 else
@@ -799,7 +767,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = centerMesh[7];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 30);
+                    //transform.localPosition = new Vector3(0, 0, 30);
                     transform.rotation = Quaternion.Euler(-90, 270, 0);
                 }
 
@@ -824,7 +792,7 @@ public class MapSetting : MonoBehaviour
                             MapManager.Instance.F = false;
                         }
 
-                        transform.position = new Vector3(-15, 0, 30);
+                        //transform.localPosition = new Vector3(-15, 0, 30);
                         transform.rotation = Quaternion.Euler(-90, 0, 0);
                     }
                     else
@@ -834,7 +802,7 @@ public class MapSetting : MonoBehaviour
                         Mfilter.mesh = sideMesh[2];
                         Mcollider.sharedMesh = Mfilter.mesh;
 
-                        transform.position = new Vector3(-15, 0, 30);
+                        //transform.localPosition = new Vector3(-15, 0, 30);
                         transform.rotation = Quaternion.Euler(-90, 90, 0);
                     }
 
@@ -842,7 +810,7 @@ public class MapSetting : MonoBehaviour
             case 13:
                 Mfilter.mesh = cornerMesh[0];
                 Mcollider.sharedMesh = Mfilter.mesh;
-                transform.position = new Vector3(30, 0, 45);
+                //transform.localPosition = new Vector3(30, 0, 45);
                 transform.rotation = Quaternion.Euler(-90, 180, 0);
 
                 break;
@@ -868,7 +836,7 @@ public class MapSetting : MonoBehaviour
                         MapManager.Instance.G = false;
                     }
 
-                    transform.position = new Vector3(15, 0, 45);
+                    //transform.localPosition = new Vector3(15, 0, 45);
                     transform.rotation = Quaternion.Euler(-90, 90, 0);
                 }
                 else
@@ -878,7 +846,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = sideMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(15, 0, 45);
+                    //transform.localPosition = new Vector3(15, 0, 45);
                     transform.rotation = Quaternion.Euler(-90, 180, 0);
                 }
 
@@ -904,7 +872,7 @@ public class MapSetting : MonoBehaviour
                         MapManager.Instance.H = false;
                     }
 
-                    transform.position = new Vector3(0, 0, 45);
+                    //transform.localPosition = new Vector3(0, 0, 45);
                     transform.rotation = Quaternion.Euler(-90, 90, 0);
                 }
                 else
@@ -914,7 +882,7 @@ public class MapSetting : MonoBehaviour
                     Mfilter.mesh = sideMesh[2];
                     Mcollider.sharedMesh = Mfilter.mesh;
 
-                    transform.position = new Vector3(0, 0, 45);
+                    //transform.localPosition = new Vector3(0, 0, 45);
                     transform.rotation = Quaternion.Euler(-90, 180, 0);
                 }
 
@@ -922,7 +890,7 @@ public class MapSetting : MonoBehaviour
             case 16:
                 Mfilter.mesh = cornerMesh[0];
                 Mcollider.sharedMesh = Mfilter.mesh;
-                transform.position = new Vector3(-15, 0, 45);
+                //transform.localPosition = new Vector3(-15, 0, 45);
                 transform.rotation = Quaternion.Euler(-90, 90, 0);
 
                 break;
