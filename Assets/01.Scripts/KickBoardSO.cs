@@ -9,7 +9,10 @@ public class KickBoardSO : ScriptableObject
     [Multiline(5)]
     public string Description;
 
-    public float Power;
+    [Header("Performance")]
+    public float Power; 
     public float SteerAngle;
-    public float Battery;
+    [Tooltip("1초에 얼마")]
+    public float BatteryEfficiency;
+    public float BatterySize;
 }
