@@ -7,27 +7,29 @@ using UnityEngine.XR;
 using Unity.VisualScripting;
 using UnityEngine.AI;
 using System.Text;
+using UnityEngine.UI;
 
 public class KickboardController : MonoBehaviour
 {
     public KickBoardSO Data;
     public GameObject centerMess;
     public UnityEvent DeadEvent;
-    public int CurrentBatteryState = 0;
+    public float CurrentBatteryState = 0;
     public bool isDead = false;
     private List<WheelCollider> wheelColliders = new List<WheelCollider>();
     private Rigidbody rb;
 
-
+    public Slider BatterySlider;
     // Start is called before the first frame update
     void Start()
     {
         isDead = false;
         wheelColliders = GameObject.FindObjectsOfType<WheelCollider>().ToList();
         rb = GetComponent<Rigidbody>();
+        BatterySlider = GameObject.FindObjectOfType<Slider>();
         rb.centerOfMass = centerMess.transform.localPosition;
         CurrentBatteryState = Data.BatterySize;
-
+        BatterySlider.maxValue = Data.BatterySize;
         StartCoroutine(Battery());
 
         SetupVisual();
@@ -36,15 +38,17 @@ public class KickboardController : MonoBehaviour
     {
         while (!isDead)
         {
-            if(CurrentBatteryState - Data.BatteryEfficiency <= 0)
+            if(CurrentBatteryState - Data.BatteryEfficiency*0.1f <= 0)
             {
                 Dead();
             }
-            CurrentBatteryState -= Data.BatteryEfficiency;
-            yield return new WaitForSeconds(1f);
+            CurrentBatteryState -= Data.BatteryEfficiency*0.1f;
+            BatterySlider.value = CurrentBatteryState;
+            yield return new WaitForSeconds(0.1f);
         }
 
         CurrentBatteryState = Mathf.Clamp(CurrentBatteryState, 0, Data.BatterySize);
+        
     }
     // Update is called once per frame
     void Update()
@@ -83,6 +87,7 @@ public class KickboardController : MonoBehaviour
         for (int i = 0; i < wheelColliders.Count; i++)
         {
             wheelColliders[i].motorTorque = isDead ? 0 : vertical * Data.Power;
+            wheelColliders[i].brakeTorque = isDead ? 1000 : 0;  
         }
     }
     void FixedUpdate()
@@ -104,7 +109,7 @@ public class KickboardController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Map"))
+        if (collision.gameObject.CompareTag("Map") && !isDead)
         {
             Dead();
         }

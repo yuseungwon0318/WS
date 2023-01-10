@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: "\uC53D\uC53D\uC774"
   Description: 
   Power: 400
-  SteerAngle: 45
+  SteerAngle: 5
   BatterySize: 9000
   BatteryEfficiency: 30
   BatteryCase: {r: 0, g: 0, b: 0, a: 0}

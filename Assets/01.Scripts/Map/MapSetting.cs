@@ -317,7 +317,7 @@ public class MapSetting : MonoBehaviour
                 else if (left && right && down)
                 {
 
-                    Mfilter.mesh = centerMesh[2];
+                    Mfilter.mesh = centerMesh[2];       
                     Mcollider.sharedMesh = Mfilter.mesh;
 
                     transform.rotation = Quaternion.Euler(-90, 0, 0);
@@ -897,6 +897,7 @@ public class MapSetting : MonoBehaviour
 
         }
         NavGenerator.instance.Generate();
+        MinimapWithNav.Instance.CreateMesh();
     }
 
 
