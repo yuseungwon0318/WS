@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.Events;
 using UnityEngine.XR;
 using Unity.VisualScripting;
 using UnityEngine.AI;
@@ -11,11 +12,12 @@ public class KickboardController : MonoBehaviour
 {
     public KickBoardSO Data;
     public GameObject centerMess;
-
+    public UnityEvent DeadEvent;
     public int CurrentBatteryState = 0;
     public bool isDead = false;
     private List<WheelCollider> wheelColliders = new List<WheelCollider>();
     private Rigidbody rb;
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,12 +38,13 @@ public class KickboardController : MonoBehaviour
         {
             if(CurrentBatteryState - Data.BatteryEfficiency <= 0)
             {
-                isDead =true;
+                Dead();
             }
             CurrentBatteryState -= Data.BatteryEfficiency;
             yield return new WaitForSeconds(1f);
         }
 
+        CurrentBatteryState = Mathf.Clamp(CurrentBatteryState, 0, Data.BatterySize);
     }
     // Update is called once per frame
     void Update()
@@ -98,7 +101,21 @@ public class KickboardController : MonoBehaviour
         yield return null;
         rb.AddTorque(Vector3.left * 6000);
     }
-    
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Map"))
+        {
+            Dead();
+        }
+    }
+
+    public void Dead()
+    {
+        DeadEvent?.Invoke();
+        Debug.Log("너는 뒤졌다");
+        isDead = true;
+    }
     public void SetupVisual()
     {
         List<Material> lst = new List<Material>();

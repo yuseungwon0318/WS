@@ -6,9 +6,14 @@ using System.Linq;
 
 public class NavGenerator : MonoBehaviour
 {
+    static public NavGenerator instance;
     public List<NavMeshSurface> list = new List<NavMeshSurface>();
     private void Awake()
     {
+        if(instance == null)
+        {
+            instance = this;
+        }
         Generate();
     }
     public void Generate()
