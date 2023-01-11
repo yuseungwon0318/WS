@@ -127,9 +127,9 @@ public class KickboardController : MonoBehaviour
     {
         GameObject character = GameObject.Find("Character");
         character.transform.parent = null;
-        character.AddComponent<CapsuleCollider>();
+        //character.AddComponent<CapsuleCollider>();
         character.AddComponent<Rigidbody>();
-        character.GetComponent<Rigidbody>().velocity *= 2;
+        //character.GetComponent<Rigidbody>().velocity *= 2;
     }
     public void SetupVisual()
     {
