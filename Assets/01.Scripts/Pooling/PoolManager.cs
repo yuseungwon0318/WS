@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-
+using UnityEngine.AI;
 [System.Serializable]
 public class Pool
 {
@@ -23,6 +23,8 @@ public class PoolManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        Init();
     }
 
     public void Init()
@@ -38,7 +40,6 @@ public class PoolManager : MonoBehaviour
             }
         });
     }
-
     public GameObject Create(Vector3 pos, string name)
     {
         for(int i = 0; i < pools.Count; i++)
@@ -54,9 +55,13 @@ public class PoolManager : MonoBehaviour
             }
         }
 
-        GameObject item = Instantiate(prefabs.Where(x => x.Name == name).First().prefab);
-        pools.Add(item);
-        item.transform.position = pos;
+        GameObject item = Instantiate(prefabs.Where(x => x.Name == name).First().prefab, transform);
+        if(item != null)
+        {
+            item.name = name;
+            pools.Add(item);
+            item.transform.position = pos;
+        }
         return item;
     }
 
@@ -65,4 +70,28 @@ public class PoolManager : MonoBehaviour
         obj.SetActive(false);
     }
     
+    [ContextMenu("test")]
+    public void Test()
+    {
+        Create(GetRandomPointOnNavMesh(GameObject.FindGameObjectWithTag("Player").transform.position, 10), "Test");
+    }
+    public void TestRemove()
+    {
+
+    }
+    private Vector3 GetRandomPointOnNavMesh(Vector3 center, float distance)
+    {
+        // center를 중심으로 반지름이 maxDistance인 구 안에서의 랜덤한 위치 하나를 저장
+        // Random.insideUnitSphere는 반지름이 1인 구 안에서의 랜덤한 한 점을 반환하는 프로퍼티
+        Vector3 randomPos = Random.insideUnitSphere * distance + center;
+
+        // 내비메시 샘플링의 결과 정보를 저장하는 변수
+        NavMeshHit hit;
+
+        // maxDistance 반경 안에서, randomPos에 가장 가까운 내비메시 위의 한 점을 찾음
+        NavMesh.SamplePosition(randomPos, out hit, distance, NavMesh.AllAreas);
+
+        // 찾은 점 반환
+        return hit.position;
+    }
 }
