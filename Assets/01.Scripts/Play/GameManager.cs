@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
 
     public void UDie()
     {
+        CheckScore();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
