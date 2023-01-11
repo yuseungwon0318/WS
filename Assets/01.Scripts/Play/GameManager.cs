@@ -68,13 +68,12 @@ public class GameManager : MonoBehaviour
         if (BestScore < Score)
         {
             PlayerPrefs.SetInt("BestScore", Score);
-            Debug.Log("최고점수 갱신");
-            BackendGameData.Instance.GameDataInsert();
-            BackendRank.Instance.RankInsert(Score);
-            
-            BestScore = Score;
 
-            BackendRank.Instance.RankInsert(GameManager.instance.Score);
+            GPGSBinder.Inst.ReportLeaderboard(GPGSIds.leaderboard_bestscore, Score);
+
+            Debug.Log("최고점수 갱신");
+           
+            BestScore = Score;
         }
     }
     public void Play()
@@ -105,7 +104,6 @@ public class GameManager : MonoBehaviour
     {
         CheckScore();
 
-        BackendRank.Instance.RankGet(); // [추가] 랭킹 불러오기 함수
         BuySystem.Instance.UpCoin(CurrentCoin);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

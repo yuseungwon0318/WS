@@ -11,7 +11,7 @@ public class SettingsUI : MonoBehaviour
     private Vector3 settingOrigin = new Vector3(0, 1500, 0);
 
 
-    private void Start()
+    private void OnEnable()
     {
         GoOrigin();
         //Rect.transform.position = shoporigin;

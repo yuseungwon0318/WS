@@ -12,7 +12,7 @@ public class Shop : MonoBehaviour
     private Vector3 shoporigin = new Vector3(-3000, 0, 0);
 
 
-    private void Start()
+    private void OnEnable()
     {
         GoOrigin();
         //Rect.transform.position = shoporigin;
