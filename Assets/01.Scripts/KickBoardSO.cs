@@ -9,6 +9,7 @@ public class KickBoardSO : ScriptableObject
     public string Name;
     [Multiline(5)]
     public string Description;
+    public int Price;
 
     [Header("Performance")]
     public float Power; 
