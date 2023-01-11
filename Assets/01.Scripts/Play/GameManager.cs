@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
     public void UDie()
     {
         CheckScore();
+        BackendGameData.Instance.GameDataInsert();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

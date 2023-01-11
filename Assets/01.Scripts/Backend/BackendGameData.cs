@@ -8,9 +8,6 @@ using BackEnd;
 public class UserData
 {
     public int BestScore = 1;
-    
-    public Dictionary<string, int> inventory = new Dictionary<string, int>();
-    public List<string> equipment = new List<string>();
 
     // 데이터를 디버깅하기 위한 함수입니다.(Debug.Log(UserData);)
     public override string ToString()
@@ -51,16 +48,16 @@ public class BackendGameData
         }
 
         Debug.Log("데이터를 초기화합니다.");
-        userData.BestScore = 1;
+        userData.BestScore = GameManager.instance.Score;
 
         Debug.Log("뒤끝 업데이트 목록에 해당 데이터들을 추가합니다.");
         Param param = new Param();
         param.Add("BestScore", userData.BestScore);
-        ;
+        
 
 
         Debug.Log("게임정보 데이터 삽입을 요청합니다.");
-        var bro = Backend.GameData.Insert("USER_DATA", param);
+        var bro = Backend.GameData.Insert("BestScore", param);
 
         if (bro.IsSuccess())
         {

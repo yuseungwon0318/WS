@@ -24,8 +24,8 @@ public class BackendRank
 
     public void RankInsert(int score)
     {
-        string rankUUID = "4088f640-693e-11ed-ad29-ad8f0c3d4c70";
-        string tableName = "USER_DATA";
+        string rankUUID = "0cb6d250-91cb-11ed-b43b-5be651ad16df";
+        string tableName = "BestScore";
         string rowInDate = string.Empty;
 
         // 랭킹을 삽입하기 위해서는 게임 데이터에서 사용하는 데이터의 inDate값이 필요합니다.
@@ -64,7 +64,7 @@ public class BackendRank
         Debug.Log("내 게임 정보의 rowInDate : " + rowInDate); // 추출된 rowIndate의 값은 다음과 같습니다.
 
         Param param = new Param();
-        param.Add("level", score);
+        param.Add("BestScore", score);
 
         // 추출된 rowIndate를 가진 데이터에 param값으로 수정을 진행하고 랭킹에 데이터를 업데이트합니다.
         Debug.Log("랭킹 삽입을 시도합니다.");
@@ -81,7 +81,7 @@ public class BackendRank
 
     public void RankGet()
     {
-        string rankUUID = "4088f640-693e-11ed-ad29-ad8f0c3d4c70";
+        string rankUUID = "0cb6d250-91cb-11ed-b43b-5be651ad16df";
 
         var bro = Backend.URank.User.GetRankList(rankUUID);
 

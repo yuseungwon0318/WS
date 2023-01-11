@@ -3686,9 +3686,34 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 7828312419355032768, guid: c7645bc94399fc348b1e50cede927b6c,
         type: 3}
+      propertyPath: DeadEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828312419355032768, guid: c7645bc94399fc348b1e50cede927b6c,
+        type: 3}
+      propertyPath: DeadEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828312419355032768, guid: c7645bc94399fc348b1e50cede927b6c,
+        type: 3}
       propertyPath: DeadEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 802396634}
+    - target: {fileID: 7828312419355032768, guid: c7645bc94399fc348b1e50cede927b6c,
+        type: 3}
+      propertyPath: DeadEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 442413378}
+    - target: {fileID: 7828312419355032768, guid: c7645bc94399fc348b1e50cede927b6c,
+        type: 3}
+      propertyPath: DeadEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828312419355032768, guid: c7645bc94399fc348b1e50cede927b6c,
+        type: 3}
+      propertyPath: DeadEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DeadCamera, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7828312419355032775, guid: c7645bc94399fc348b1e50cede927b6c,
         type: 3}
       propertyPath: m_Name
