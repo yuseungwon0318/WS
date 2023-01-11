@@ -1,28 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 660911240, guid: f624596d5fe1bd5459a5da424a8abc1b, type: 3}
-  m_Name: TheBackendSettings
-  m_EditorClassIdentifier: 
-  clientAppID: 9824c6a0-9133-11ed-899a-936de897e9334391
-  signatureKey: 9824edb0-9133-11ed-899a-936de897e9334391
-  functionAuthKey: 
-  packageName: com.WhyNot.Kickgoing
-  isAllPlatform: 1
-  sendLogReport: 1
-  rateCountActive: 0
-  timeOutSec: 100
-  Version: 5.9.2
-  autoRefreshToken: 1
-  retryWhenClientRequestFailError: 1
-  retryWhenServerError: 1
-  retryWhenBadSignatureError: 1
-  initFailWhenDeviceIdUnknown: 1
+version https://git-lfs.github.com/spec/v1
+oid sha256:741dea72e1a9c314e342c2c44dd03b1e5221fa6b5b1e01ef5d37038cbf735c62
+size 849

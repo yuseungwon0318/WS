@@ -1,30 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee72fabf5bf7c0b448915c4b7f01b835, type: 3}
-  m_Name: Mint
-  m_EditorClassIdentifier: 
-  Name: 
-  Description: 
-  Power: 400
-  SteerAngle: 35
-  BatterySize: 5000
-  BatteryEfficiency: 50
-  BatteryCase: {r: 0, g: 0, b: 0, a: 0}
-  BatteryCover: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 0}
-  FrontAxle: {r: 0.12046986, g: 0.8867924, b: 0.7624118, a: 0}
-  HandleBar: {r: 0, g: 0, b: 0, a: 0}
-  HandleBarExtra: {r: 0.121568635, g: 0.8862746, b: 0.7607844, a: 0}
-  HandleCenter: {r: 0.121568635, g: 0.8862746, b: 0.7607844, a: 0}
-  RearAxle: {r: 0, g: 0, b: 0, a: 0}
-  RearWheelCover: {r: 0.121568635, g: 0.8862746, b: 0.7607844, a: 0}
-  SteerRod: {r: 0.121568635, g: 0.8862746, b: 0.7607844, a: 0}
-  SteerSupporter: {r: 0, g: 0, b: 0, a: 0}
+version https://git-lfs.github.com/spec/v1
+oid sha256:426f7981e1ec16620e34c3e63d5448260fa5900ec5f676d1f4adde7ac6035351
+size 1102

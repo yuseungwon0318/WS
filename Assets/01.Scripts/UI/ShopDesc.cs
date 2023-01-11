@@ -1,19 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using UnityEngine.UI;
+using TMPro;
 
 public class ShopDesc : MonoBehaviour
 {
     public List<KickBoardSO> boards = new List<KickBoardSO>(); //알아서 넣어
     public KickBoardSO CurrentBoard;
 
-    // Start is called before the first frame update
+    public TextMeshProUGUI NameText;
+    public TextMeshProUGUI DescriptionText;
+    public Button BuyButton;
+    public TextMeshProUGUI BuyButtonText;
+
     void Start()
     {
-        
+        boards = boards.OrderBy(item => item.Price).ToList();
+        CurrentBoard = boards[0];
     }
 
-    // Update is called once per frame
     void Update()
     {
         
