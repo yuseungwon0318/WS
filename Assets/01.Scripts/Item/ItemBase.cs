@@ -16,10 +16,10 @@ public abstract class ItemBase : MonoBehaviour
     {
         
     }
-
-    public virtual void OnCollisionEnter(Collision collision)
+    
+    public virtual void OnTriggerEnter(Collider collision)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             GetItem();
         }

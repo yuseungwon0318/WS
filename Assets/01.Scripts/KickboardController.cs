@@ -117,9 +117,19 @@ public class KickboardController : MonoBehaviour
 
     public void Dead()
     {
+        BreakCapsule();
         DeadEvent?.Invoke();
         Debug.Log("너는 뒤졌다");
         isDead = true;
+    }
+
+    public void BreakCapsule()
+    {
+        GameObject character = GameObject.Find("Character");
+        character.transform.parent = null;
+        character.AddComponent<CapsuleCollider>();
+        character.AddComponent<Rigidbody>();
+        character.GetComponent<Rigidbody>().velocity *= 2;
     }
     public void SetupVisual()
     {

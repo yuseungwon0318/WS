@@ -11,9 +11,13 @@ public class GameManager : MonoBehaviour
     public bool isStarted = false;
     public int CountdownTime = 3;
     public float time;
-    public float Score;
+    public int Score;
+    public int CurrentCoin;
     public KickboardController player;
     public UnityEvent GameStartEvent;
+    public UnityEvent GetCoinEvent;
+
+    public int CoinScoreRatio = 3;
     void Awake()
     {
         if(instance == null)
@@ -23,12 +27,18 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(gameObject);    
         }
 
         player = GameObject.FindObjectOfType<KickboardController>();
         isStarted = false;
         time = 0;
+    }
+
+    public void GetCoin(int n)
+    {
+        CurrentCoin += n;
+        GetCoinEvent?.Invoke();
     }
 
     private void Start()
@@ -41,7 +51,7 @@ public class GameManager : MonoBehaviour
     }
     public void CheckScore()
     {
-
+        Score = (int)time + CurrentCoin*CoinScoreRatio;
     }
     public void Play()
     {
