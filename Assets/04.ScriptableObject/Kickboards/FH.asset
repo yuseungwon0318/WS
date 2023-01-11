@@ -18,13 +18,13 @@ MonoBehaviour:
   SteerAngle: 30
   BatterySize: 9000
   BatteryEfficiency: 30
-  BatteryCase: {r: 0, g: 0, b: 0, a: 0}
-  BatteryCover: {r: 0, g: 0, b: 0, a: 0}
-  FrontAxle: {r: 0, g: 0, b: 0, a: 0}
+  BatteryCase: {r: 0.69411767, g: 0.2901961, b: 0.2901961, a: 0}
+  BatteryCover: {r: 0.69411767, g: 0.2901961, b: 0.2901961, a: 0}
+  FrontAxle: {r: 0.68235296, g: 0.68235296, b: 0.68235296, a: 0}
   HandleBar: {r: 0, g: 0, b: 0, a: 0}
-  HandleBarExtra: {r: 0, g: 0, b: 0, a: 0}
-  HandleCenter: {r: 0, g: 0, b: 0, a: 0}
+  HandleBarExtra: {r: 0.8301887, g: 0.80063903, b: 0.12061229, a: 0}
+  HandleCenter: {r: 0.227451, g: 0.227451, b: 0.227451, a: 0}
   RearAxle: {r: 0, g: 0, b: 0, a: 0}
-  RearWheelCover: {r: 0, g: 0, b: 0, a: 0}
-  SteerRod: {r: 0, g: 0, b: 0, a: 0}
+  RearWheelCover: {r: 0.8313726, g: 0.8000001, b: 0.121568635, a: 1}
+  SteerRod: {r: 0.69411767, g: 0.2901961, b: 0.2901961, a: 0}
   SteerSupporter: {r: 0, g: 0, b: 0, a: 0}

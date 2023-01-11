@@ -1584,6 +1584,7 @@ MonoBehaviour:
       m_Calls: []
   CurrentBatteryState: 0
   isDead: 0
+  BatterySlider: {fileID: 0}
 --- !u!54 &1548284999
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2790,6 +2791,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.346
       objectReference: {fileID: 0}
+    - target: {fileID: 7828312419355032768, guid: c7645bc94399fc348b1e50cede927b6c,
+        type: 3}
+      propertyPath: Data
+      value: 
+      objectReference: {fileID: 11400000, guid: d76e8dba85b8c1245bbe62d991c80ad3,
+        type: 2}
     - target: {fileID: 7828312419355032775, guid: c7645bc94399fc348b1e50cede927b6c,
         type: 3}
       propertyPath: m_Name

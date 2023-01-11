@@ -3767,6 +3767,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7828312419355032768, guid: c7645bc94399fc348b1e50cede927b6c,
         type: 3}
+      propertyPath: Data
+      value: 
+      objectReference: {fileID: 11400000, guid: 54a3733c2b215104bae9bf8145ae1d6d,
+        type: 2}
+    - target: {fileID: 7828312419355032768, guid: c7645bc94399fc348b1e50cede927b6c,
+        type: 3}
       propertyPath: DeadEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 802396634}

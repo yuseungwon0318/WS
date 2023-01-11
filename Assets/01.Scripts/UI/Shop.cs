@@ -6,17 +6,23 @@ using DG.Tweening;
 
 public class Shop : MonoBehaviour
 {
-    public RectTransform ShopPannel;
-    private Vector3 origin = new Vector3(380,250, 0);
+    public RectTransform Rect;
+
+    private Vector3 origin = new Vector3(0, 0, 0);
+    private Vector3 shoporigin = new Vector3(-3000, 0, 0);
 
     private void Start()
     {
-        
+        Rect.transform.position = shoporigin;
     }
 
     public void ShopClick()
     {
-        ShopPannel.DOMove(origin, 1);    
+        Rect.DOLocalMove(origin, 1);
+    }
+    public void GoOrigin()
+    {
+        Rect.DOLocalMove(shoporigin, 1);
     }
 
 }
