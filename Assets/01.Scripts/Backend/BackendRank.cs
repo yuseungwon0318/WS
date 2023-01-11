@@ -103,7 +103,6 @@ public class BackendRank
             info.AppendLine("닉네임 : " + jsonData["nickname"].ToString());
             info.AppendLine("점수 : " + jsonData["score"].ToString());
             info.AppendLine("gamerInDate : " + jsonData["gamerInDate"].ToString());
-            info.AppendLine("정렬번호 : " + jsonData["index"].ToString());
             info.AppendLine();
             Debug.Log(info);
         }

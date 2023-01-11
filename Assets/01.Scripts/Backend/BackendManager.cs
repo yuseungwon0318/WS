@@ -33,7 +33,7 @@ public class BackendManager : MonoBehaviour
 
             
 
-            BackendRank.Instance.RankInsert(100); // [추가] 랭킹 등록하기 함수
+             // [추가] 랭킹 등록하기 함수
             BackendRank.Instance.RankGet(); // [추가] 랭킹 불러오기 함수
 
             Debug.Log("테스트를 종료합니다.");

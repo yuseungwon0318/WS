@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int CountdownTime = 3;
     public float time;
     public int Score;
+    public int BestScore;
     public int CurrentCoin;
     public KickboardController player;
     public UnityEvent GameStartEvent;
@@ -84,7 +85,16 @@ public class GameManager : MonoBehaviour
     public void UDie()
     {
         CheckScore();
-        BackendGameData.Instance.GameDataInsert();
+        
+
+        if(BestScore < Score)
+        {
+            BackendGameData.Instance.GameDataInsert();
+            BackendRank.Instance.RankInsert(Score);
+            BestScore = Score;
+        }
+
+        BackendRank.Instance.RankInsert(GameManager.instance.Score);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

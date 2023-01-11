@@ -7,7 +7,7 @@ using BackEnd;
 
 public class UserData
 {
-    public int BestScore = 1;
+    public int BestScore = GameManager.instance.BestScore;
 
     // 데이터를 디버깅하기 위한 함수입니다.(Debug.Log(UserData);)
     public override string ToString()
@@ -48,7 +48,7 @@ public class BackendGameData
         }
 
         Debug.Log("데이터를 초기화합니다.");
-        userData.BestScore = GameManager.instance.Score;
+        userData.BestScore = GameManager.instance.BestScore;
 
         Debug.Log("뒤끝 업데이트 목록에 해당 데이터들을 추가합니다.");
         Param param = new Param();
