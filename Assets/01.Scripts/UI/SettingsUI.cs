@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
+using UnityEngine.UI;
 using DG.Tweening;
-
-public class Shop : MonoBehaviour
+public class SettingsUI : MonoBehaviour
 {
     public RectTransform Rect;
 
     private Vector3 origin = new Vector3(0, 0, 0);
-    private Vector3 shoporigin = new Vector3(-3000, 0, 0);
+    private Vector3 settingOrigin = new Vector3(0, 1500, 0);
 
 
     private void Start()
@@ -18,14 +17,12 @@ public class Shop : MonoBehaviour
         //Rect.transform.position = shoporigin;
     }
 
-    public void ShopClick()
+    public void SettingsClick()
     {
-        Rect.DOLocalMove(origin, 0.5f);
+        Rect.DOLocalMove(origin, 1);
     }
     public void GoOrigin()
     {
-        Rect.DOLocalMove(shoporigin, 0.5f);
+        Rect.DOLocalMove(settingOrigin, 1);
     }
-
-    
 }
