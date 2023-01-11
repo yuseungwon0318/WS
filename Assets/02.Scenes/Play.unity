@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.99974084, g: 0.99974084, b: 0.99974084, a: 1}
+  m_IndirectSpecularColor: {r: 0.9997447, g: 0.9997447, b: 0.9997447, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -487,6 +487,7 @@ MonoBehaviour:
   GetCoinEvent:
     m_PersistentCalls:
       m_Calls: []
+  CoinScoreRatio: 3
 --- !u!1 &453520109
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +659,7 @@ MonoBehaviour:
   prefabs:
   - Name: Battery
     count: 5
-    prefab: {fileID: 461947091929875880, guid: 2a802165ae2a64c468791c325f36f2f4, type: 3}
+    prefab: {fileID: 461947091929875880, guid: f02a826d576de714b947be6fa31a68be, type: 3}
   - Name: Coin
     count: 5
     prefab: {fileID: 461947091929875880, guid: f024b3e5d25e2974ca6c78d35ee2d43a, type: 3}
@@ -2720,7 +2721,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 900, y: 150}
+  m_SizeDelta: {x: 900, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1765717988
 MonoBehaviour:

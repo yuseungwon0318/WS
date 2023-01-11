@@ -5,11 +5,12 @@ using UnityEngine.Events;
 
 public abstract class ItemBase : MonoBehaviour
 {
+    public KickboardController Player;
     //public UnityEvent CollisionEvt; 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
-        
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<KickboardController>();
     }
 
     void Update()
