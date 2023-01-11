@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class GameManager : MonoBehaviour
     public int CountdownTime = 3;
     public float time;
     public float Score;
-
+    public KickboardController player;
+    public UnityEvent GameStartEvent;
     void Awake()
     {
         if(instance == null)
@@ -24,6 +26,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        player = GameObject.FindObjectOfType<KickboardController>();
         isStarted = false;
         time = 0;
     }
@@ -52,10 +55,20 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSecondsRealtime(1f);
         }
         Time.timeScale = 1;
+        isStarted = true;
+        GameStartEvent?.Invoke();
     }
-    // Update is called once per frame
+
     void Update()
     {
-        time += Time.deltaTime;
+        if(isStarted && !player.isDead)
+        {
+            time += Time.deltaTime;
+        }
+    }
+
+    public void UDie()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
