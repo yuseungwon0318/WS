@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public abstract class ItemBase : MonoBehaviour
 {
-    public UnityEvent CollisionEvt; 
+    //public UnityEvent CollisionEvt; 
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +16,10 @@ public abstract class ItemBase : MonoBehaviour
     {
         
     }
-
-    private void OnCollisionEnter(Collision collision)
+    
+    public virtual void OnTriggerEnter(Collider collision)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             GetItem();
         }
@@ -27,6 +27,6 @@ public abstract class ItemBase : MonoBehaviour
 
     public virtual void GetItem()
     {
-
+        PoolManager.Instance.Remove(gameObject);
     }
 }

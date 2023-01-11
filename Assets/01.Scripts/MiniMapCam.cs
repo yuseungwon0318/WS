@@ -5,7 +5,7 @@ using UnityEngine;
 public class MiniMapCam : MonoBehaviour
 {
     public Transform target;
-    public float Distance;
+    public float Distance;  
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +16,7 @@ public class MiniMapCam : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(target.position.x, Distance, target.position.z);
+
+
     }
 }

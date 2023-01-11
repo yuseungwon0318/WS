@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-
+using UnityEngine.AI;
 [System.Serializable]
 public class Pool
 {
@@ -23,6 +23,8 @@ public class PoolManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        Init();
     }
 
     public void Init()
@@ -38,7 +40,6 @@ public class PoolManager : MonoBehaviour
             }
         });
     }
-
     public GameObject Create(Vector3 pos, string name)
     {
         for(int i = 0; i < pools.Count; i++)
@@ -54,9 +55,13 @@ public class PoolManager : MonoBehaviour
             }
         }
 
-        GameObject item = Instantiate(prefabs.Where(x => x.Name == name).First().prefab);
-        pools.Add(item);
-        item.transform.position = pos;
+        GameObject item = Instantiate(prefabs.Where(x => x.Name == name).First().prefab, transform);
+        if(item != null)
+        {
+            item.name = name;
+            pools.Add(item);
+            item.transform.position = pos;
+        }
         return item;
     }
 
@@ -64,5 +69,7 @@ public class PoolManager : MonoBehaviour
     {
         obj.SetActive(false);
     }
+    
+    
     
 }

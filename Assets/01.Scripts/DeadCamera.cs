@@ -21,14 +21,18 @@ public class DeadCamera : MonoBehaviour
     }
     IEnumerator DeadFOV()
     {
+        GameObject target = GameObject.Find("Character");
+        //vcam.Follow = target.transform;
+        vcam.LookAt = target.transform;
         float i = max;
         while(i >= min)
         {
-            i -= 0.035f;
+            i -= 0.015f;
             vcam.m_Lens.FieldOfView = i;
             yield return new WaitForSecondsRealtime(0.01f);
         }
         Time.timeScale = 0;
+        GameManager.instance.UDie();
     }
     // Update is called once per frame
     void Update()
