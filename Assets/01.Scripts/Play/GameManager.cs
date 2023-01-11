@@ -41,9 +41,12 @@ public class GameManager : MonoBehaviour
         GetCoinEvent?.Invoke();
     }
 
+    
+
     private void Start()
     {
         Play();
+
         Application.targetFrameRate = 120;
     }
     public void End()

@@ -8,6 +8,8 @@ public class BackendManager : MonoBehaviour
 {
     void Start()
     {
+        GameManager.instance.Play();
+
         var bro = Backend.Initialize(true); // 뒤끝 초기화
 
         // 뒤끝 초기화에 대한 응답값
