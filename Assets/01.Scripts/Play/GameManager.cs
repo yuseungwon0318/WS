@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public UnityEvent GameStartEvent;
     public UnityEvent GetCoinEvent;
 
+    public KickBoardSO currentKickboard = null;
+
     public int CoinScoreRatio = 3;
     void Awake()
     {
@@ -35,7 +37,11 @@ public class GameManager : MonoBehaviour
         isStarted = false;
         time = 0;
     }
-
+    public void SetKickboard(KickBoardSO so)
+    {
+        player.Data = so;
+        player.SetupVisual();
+    }
     public void GetCoin(int n)
     {
         CurrentCoin += n;
@@ -100,7 +106,7 @@ public class GameManager : MonoBehaviour
         CheckScore();
 
         BackendRank.Instance.RankGet(); // [추가] 랭킹 불러오기 함수
-        
+        BuySystem.Instance.UpCoin(CurrentCoin);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

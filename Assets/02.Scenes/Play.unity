@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 18985650}
   - component: {fileID: 18985649}
   - component: {fileID: 18985648}
+  - component: {fileID: 18985651}
   m_Layer: 8
   m_Name: Minimap Mesh Bottom (1)
   m_TagString: Untagged
@@ -208,6 +209,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &18985651
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18985647}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0000002, z: 0}
+  m_Center: {x: 0, y: -7.014488e-24, z: -8.940697e-10}
 --- !u!1 &46454014
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +483,7 @@ MonoBehaviour:
   CountdownTime: 3
   time: 0
   Score: 0
+  BestScore: 0
   CurrentCoin: 0
   player: {fileID: 0}
   GameStartEvent:
@@ -3445,7 +3460,7 @@ PrefabInstance:
     - target: {fileID: 4092394944620704454, guid: 4c6a56344b8201643b0240fdd14bd26c,
         type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 5
+      value: 2.254997
       objectReference: {fileID: 0}
     - target: {fileID: 4092394944620704457, guid: 4c6a56344b8201643b0240fdd14bd26c,
         type: 3}
@@ -3485,7 +3500,7 @@ PrefabInstance:
     - target: {fileID: 4092394946578768599, guid: 4c6a56344b8201643b0240fdd14bd26c,
         type: 3}
       propertyPath: field of view
-      value: 5
+      value: 2.254997
       objectReference: {fileID: 0}
     - target: {fileID: 4092394946578768600, guid: 4c6a56344b8201643b0240fdd14bd26c,
         type: 3}

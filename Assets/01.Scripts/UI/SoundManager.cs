@@ -25,6 +25,7 @@ public class SoundManager : MonoBehaviour
     public Slider sfx;
     public Slider bgm;
     //public Slider master;
+    [Header("Save")]
     public string path;
     public string folderName;
     public string fileName;

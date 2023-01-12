@@ -17,7 +17,7 @@ public class ShopDesc : MonoBehaviour
     public TextMeshProUGUI PriceText;
     public Button BuyButton;
     public TextMeshProUGUI BuyButtonText;
-
+    public GameObject Store, Garage;
     void Start()
     {
         render = GameObject.FindObjectOfType<KickboardRender>();
@@ -59,6 +59,16 @@ public class ShopDesc : MonoBehaviour
 
     public void ChangeTarget()
     {
+        if (BuySystem.Instance.own.owns[BuySystem.Instance.datas.FindIndex(x => x == CurrentBoard)])
+        {
+            Store.SetActive(false);
+        }
+        else
+        {
+            Store.SetActive(true);
+        }
+        Garage.SetActive(!Store.activeSelf);
+
         render.Data = CurrentBoard;
         render.SetupVisual();
         NameText.text = CurrentBoard.Name;
@@ -68,8 +78,9 @@ public class ShopDesc : MonoBehaviour
 
     public void ClickBuyBtn()
     {
-        if(CurrentBoard.Price <= BuySystem.Instance.Coin)
+        if(CurrentBoard.Price <= BuySystem.Instance.own.Coin)
         {
+            BuySystem.Instance.Buy(CurrentBoard);
             //BuySystem.Instance.DownCoin(CurrentBoard.Price);
         }
     }
