@@ -42,6 +42,7 @@ public class BuySystem : MonoBehaviour
     }
     private void Start()
     {
+        Debug.Log(datas.Count);
         own.owns = new bool[datas.Count];
         own.owns[0] = true;
 

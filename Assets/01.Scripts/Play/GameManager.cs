@@ -47,22 +47,14 @@ public class GameManager : MonoBehaviour
         CurrentCoin += n;
         GetCoinEvent?.Invoke();
     }
-
-    
-
     private void Start()
     {
         Play();
-        
         Application.targetFrameRate = 120;
     }
-    public void End()
-    {
-        
-    }
+
     public void CheckScore()
     {
-       
         Score = (int)time + CurrentCoin*CoinScoreRatio;
         
         if (BestScore < Score)
@@ -80,15 +72,24 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(Countdown());
     }
+
     IEnumerator Countdown()
     {
+        time = 0;
+        Score = 0;
+        CurrentCoin = 0;
+
+        isStarted = false;
+
         Time.timeScale = 0;
         for(int i = 0; i < CountdownTime; i++)
         {
             yield return new WaitForSecondsRealtime(1f);
         }
         Time.timeScale = 1;
+
         isStarted = true;
+
         GameStartEvent?.Invoke();
     }
 
@@ -103,6 +104,7 @@ public class GameManager : MonoBehaviour
     public void UDie()
     {
         CheckScore();
+
 
         BuySystem.Instance.UpCoin(CurrentCoin);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

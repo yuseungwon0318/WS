@@ -185,8 +185,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 33e0b590e3e303a458150131aa0cf3b2, type: 2}
-  m_sharedMaterial: {fileID: 9125285354315401775, guid: 33e0b590e3e303a458150131aa0cf3b2,
+  m_fontAsset: {fileID: 11400000, guid: 157cb5c468b7a184092255a437fe72dc, type: 2}
+  m_sharedMaterial: {fileID: 4318487325931343749, guid: 157cb5c468b7a184092255a437fe72dc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -555,8 +555,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 15 Coin
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 33e0b590e3e303a458150131aa0cf3b2, type: 2}
-  m_sharedMaterial: {fileID: 9125285354315401775, guid: 33e0b590e3e303a458150131aa0cf3b2,
+  m_fontAsset: {fileID: 11400000, guid: 157cb5c468b7a184092255a437fe72dc, type: 2}
+  m_sharedMaterial: {fileID: 4318487325931343749, guid: 157cb5c468b7a184092255a437fe72dc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -856,8 +856,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uAD6C\uB9E4\uD558\uAE30"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 33e0b590e3e303a458150131aa0cf3b2, type: 2}
-  m_sharedMaterial: {fileID: 9125285354315401775, guid: 33e0b590e3e303a458150131aa0cf3b2,
+  m_fontAsset: {fileID: 11400000, guid: 157cb5c468b7a184092255a437fe72dc, type: 2}
+  m_sharedMaterial: {fileID: 4318487325931343749, guid: 157cb5c468b7a184092255a437fe72dc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1529,8 +1529,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 33e0b590e3e303a458150131aa0cf3b2, type: 2}
-  m_sharedMaterial: {fileID: 9125285354315401775, guid: 33e0b590e3e303a458150131aa0cf3b2,
+  m_fontAsset: {fileID: 11400000, guid: 157cb5c468b7a184092255a437fe72dc, type: 2}
+  m_sharedMaterial: {fileID: 4318487325931343749, guid: 157cb5c468b7a184092255a437fe72dc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2226,8 +2226,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uC120\uD0DD\uD558\uAE30"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 33e0b590e3e303a458150131aa0cf3b2, type: 2}
-  m_sharedMaterial: {fileID: 9125285354315401775, guid: 33e0b590e3e303a458150131aa0cf3b2,
+  m_fontAsset: {fileID: 11400000, guid: 157cb5c468b7a184092255a437fe72dc, type: 2}
+  m_sharedMaterial: {fileID: 4318487325931343749, guid: 157cb5c468b7a184092255a437fe72dc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2630,8 +2630,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 33e0b590e3e303a458150131aa0cf3b2, type: 2}
-  m_sharedMaterial: {fileID: 9125285354315401775, guid: 33e0b590e3e303a458150131aa0cf3b2,
+  m_fontAsset: {fileID: 11400000, guid: 157cb5c468b7a184092255a437fe72dc, type: 2}
+  m_sharedMaterial: {fileID: 4318487325931343749, guid: 157cb5c468b7a184092255a437fe72dc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2797,8 +2797,13 @@ MonoBehaviour:
   own:
     Coin: 0
     owns: 
-  datas: []
-  coinText: {fileID: 0}
+  datas:
+  - {fileID: 11400000, guid: b2f100a840ce80d4391745c1ee3b1bdd, type: 2}
+  - {fileID: 11400000, guid: d76e8dba85b8c1245bbe62d991c80ad3, type: 2}
+  - {fileID: 11400000, guid: 27c58f590007f134fb10765db018051b, type: 2}
+  - {fileID: 11400000, guid: 54a3733c2b215104bae9bf8145ae1d6d, type: 2}
+  - {fileID: 11400000, guid: 2f31c82bcefcd744b8c8192c922e55a4, type: 2}
+  coinText: {fileID: 718009276}
   path: 
   folderName: SaveFolder
   fileName: Own.Json
@@ -2900,9 +2905,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 33e0b590e3e303a458150131aa0cf3b2, type: 2}
-  m_sharedMaterial: {fileID: 9125285354315401775, guid: 33e0b590e3e303a458150131aa0cf3b2,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
