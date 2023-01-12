@@ -33,7 +33,7 @@ public class BackendManager : MonoBehaviour
             BackendLogin.Instance.UpdateNickname("원하는 이름"); // [추가] 닉네임 변겅
 
             
-            
+
 
             Debug.Log("테스트를 종료합니다.");
         });
