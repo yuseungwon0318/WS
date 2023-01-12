@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Linq;
+using TMPro;
 
 [System.Serializable]
 public class Own
@@ -16,6 +17,7 @@ public class BuySystem : MonoBehaviour
     public Own own;
     static public BuySystem Instance;
     public List<KickBoardSO> datas = new List<KickBoardSO>();
+    public TextMeshProUGUI coinText;
 
     [Header("Save")]
     public string path;
@@ -35,6 +37,8 @@ public class BuySystem : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        coinText.text = own.Coin.ToString();
     }
     private void Start()
     {
@@ -55,6 +59,15 @@ public class BuySystem : MonoBehaviour
     public void UpCoin(int coin)
     {
         own.Coin += coin;
+        Save();
+        if(coinText == null)
+        {
+
+        }
+        else
+        {
+            coinText.text = own.Coin.ToString();
+        }
     }
 
     
@@ -62,11 +75,13 @@ public class BuySystem : MonoBehaviour
     {
         own.Coin -= data.Price;
         own.owns[datas.FindIndex(x => x == data)] = true;
+        coinText.text = own.Coin.ToString();
         Save();
     }
 
     public void Save()
     {
+        path = Application.persistentDataPath + "/" + folderName;
         string json = JsonUtility.ToJson(own);
         string filePath = path + "/" + fileName;
         File.WriteAllText(filePath, json);

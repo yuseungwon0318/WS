@@ -13,7 +13,10 @@ public class KickboardRender : MonoBehaviour
     {
         SetupVisual();
     }
-    
+    private void Update()
+    {
+        transform.localEulerAngles += new Vector3(0, 0.5f, 0);
+    }
     public void SetupVisual()
     {
         List<Material> lst = new List<Material>();

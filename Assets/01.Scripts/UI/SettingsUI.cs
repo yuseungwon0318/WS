@@ -13,16 +13,17 @@ public class SettingsUI : MonoBehaviour
 
     private void OnEnable()
     {
-        GoOrigin();
+        GoOrigin(0);
         //Rect.transform.position = shoporigin;
     }
 
-    public void SettingsClick()
+
+    public void SettingsClick(float time)
     {
-        Rect.DOLocalMove(origin, 1);
+        Rect.DOLocalMove(origin, time);
     }
-    public void GoOrigin()
+    public void GoOrigin(float time)
     {
-        Rect.DOLocalMove(settingOrigin, 1);
+        Rect.DOLocalMove(settingOrigin, time);
     }
 }
