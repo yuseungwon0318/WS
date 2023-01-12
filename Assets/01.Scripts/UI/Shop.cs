@@ -14,17 +14,17 @@ public class Shop : MonoBehaviour
 
     private void OnEnable()
     {
-        GoOrigin();
+        GoOrigin(0);
         //Rect.transform.position = shoporigin;
     }
 
-    public void ShopClick()
+    public void ShopClick(float time)
     {
-        Rect.DOLocalMove(origin, 0.5f);
+        Rect.DOLocalMove(origin, time);
     }
-    public void GoOrigin()
+    public void GoOrigin(float time)
     {
-        Rect.DOLocalMove(shoporigin, 0.5f);
+        Rect.DOLocalMove(shoporigin, time);
     }
 
     
