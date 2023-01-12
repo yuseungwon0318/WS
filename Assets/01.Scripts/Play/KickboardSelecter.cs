@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class latelyKickboard
 {
@@ -35,20 +36,37 @@ public class KickboardSelecter : MonoBehaviour
 
     private void Start()
     {
-
+        ClickSelect();
     }
-
+    public void ClickSelect()
+    {
+        ShopDesc shop = GameObject.FindObjectOfType<ShopDesc>();
+        CurrentKickBoard = shop.CurrentBoard;
+    }
     public void Save()
     {
-        if (BuySystem.Instance.own.owns[kickboard.index])
-        {
-            string json = JsonUtility.ToJson(kickboard);
-            File.WriteAllText(path, json);
-        }
+        //if (BuySystem.Instance.own.owns[kickboard.index])
+        //{
+        //    string json = JsonUtility.ToJson(kickboard);
+        //    File.WriteAllText(path, json);
+        //}
     }
 
     public void Load()
     {
 
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if(scene.name == "Play")
+        {
+            GameManager.instance.SetKickboard(CurrentKickBoard);
+        }
     }
 }
