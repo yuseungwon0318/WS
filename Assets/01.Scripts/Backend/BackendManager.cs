@@ -29,12 +29,7 @@ public class BackendManager : MonoBehaviour
     async void Test()
     {
         await Task.Run(() => {
-            BackendLogin.Instance.CustomLogin("user1", "1234"); // 뒤끝 로그인 함수
-            BackendLogin.Instance.UpdateNickname("원하는 이름"); // [추가] 닉네임 변겅
-
-            
-
-
+             
             Debug.Log("테스트를 종료합니다.");
         });
     }
