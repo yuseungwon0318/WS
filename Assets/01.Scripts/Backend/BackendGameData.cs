@@ -7,7 +7,7 @@ using BackEnd;
 
 public class UserData
 {
-    public int BestScore = 1;
+    public int BestScore = GameManager.instance.Score;
     
     public Dictionary<string, int> inventory = new Dictionary<string, int>();
     public List<string> equipment = new List<string>();
@@ -51,7 +51,7 @@ public class BackendGameData
         }
 
         Debug.Log("데이터를 초기화합니다.");
-        userData.BestScore = 1;
+        userData.BestScore = GameManager.instance.BestScore;
 
         Debug.Log("뒤끝 업데이트 목록에 해당 데이터들을 추가합니다.");
         Param param = new Param();
@@ -60,7 +60,7 @@ public class BackendGameData
 
 
         Debug.Log("게임정보 데이터 삽입을 요청합니다.");
-        var bro = Backend.GameData.Insert("USER_DATA", param);
+        var bro = Backend.GameData.Insert("BestScore", param);
 
         if (bro.IsSuccess())
         {
@@ -133,13 +133,13 @@ public class BackendGameData
         {
             Debug.Log("내 제일 최신 게임정보 데이터 수정을 요청합니다.");
 
-            bro = Backend.GameData.Update("USER_DATA", new Where(), param);
+            bro = Backend.GameData.Update("BestScore", new Where(), param);
         }
         else
         {
             Debug.Log($"{gameDataRowInDate}의 게임정보 데이터 수정을 요청합니다.");
 
-            bro = Backend.GameData.UpdateV2("USER_DATA", gameDataRowInDate, Backend.UserInDate, param);
+            bro = Backend.GameData.UpdateV2("BestScore", gameDataRowInDate, Backend.UserInDate, param);
         }
 
         if (bro.IsSuccess())

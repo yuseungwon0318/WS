@@ -32,8 +32,8 @@ public class BackendManager : MonoBehaviour
             BackendLogin.Instance.CustomLogin("user1", "1234"); // 뒤끝 로그인 함수
             BackendLogin.Instance.UpdateNickname("원하는 이름"); // [추가] 닉네임 변겅
 
-            BackendRank.Instance.RankInsert(100); // [추가] 랭킹 등록하기 함수
-            BackendRank.Instance.RankGet(); // [추가] 랭킹 불러오기 함수
+            
+            
 
             Debug.Log("테스트를 종료합니다.");
         });

@@ -70,7 +70,7 @@ public class ShopDesc : MonoBehaviour
     {
         if(CurrentBoard.Price <= BuySystem.Instance.Coin)
         {
-            BuySystem.Instance.DownCoin(CurrentBoard.Price);
+            //BuySystem.Instance.DownCoin(CurrentBoard.Price);
         }
     }
 }
