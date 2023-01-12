@@ -19,14 +19,24 @@ public class KickBoardSO : ScriptableObject
     public int BatteryEfficiency;
 
     [Header("Visual")]
+    [ColorUsage(false)]
     public Color BatteryCase;
+    [ColorUsage(false)]
     public Color BatteryCover;
+    [ColorUsage(false)]
     public Color FrontAxle;
+    [ColorUsage(false)]
     public Color HandleBar;
+    [ColorUsage(false)]
     public Color HandleBarExtra;
+    [ColorUsage(false)]
     public Color HandleCenter;
+    [ColorUsage(false)]
     public Color RearAxle;
+    [ColorUsage(false)]
     public Color RearWheelCover;
+    [ColorUsage(false)]
     public Color SteerRod;
+    [ColorUsage(false)]
     public Color SteerSupporter;
 }

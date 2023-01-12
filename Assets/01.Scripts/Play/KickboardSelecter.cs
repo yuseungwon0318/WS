@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.SceneManagement;
-
+using System.Linq;
 public class latelyKickboard
 {
     public int index;
@@ -46,11 +46,7 @@ public class KickboardSelecter : MonoBehaviour
     }
     public void Save()
     {
-        //if (BuySystem.Instance.own.owns[kickboard.index])
-        //{
-        //    string json = JsonUtility.ToJson(kickboard);
-        //    File.WriteAllText(path, json);
-        //}
+        PlayerPrefs.SetInt("Last", BuySystem.Instance.datas.FindIndex(x => x == CurrentKickBoard));
     }
 
     public void Load()
