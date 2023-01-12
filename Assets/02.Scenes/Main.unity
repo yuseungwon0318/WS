@@ -1049,6 +1049,7 @@ MonoBehaviour:
   BuyButtonText: {fileID: 325895423}
   Store: {fileID: 1903222847}
   Garage: {fileID: 110536246}
+  SelectText: {fileID: 1181544420}
 --- !u!1 &402573151
 GameObject:
   m_ObjectHideFlags: 0

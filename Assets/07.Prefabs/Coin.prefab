@@ -64,6 +64,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0da7cac0f3076de4ca22c9ea5e33f9be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  CoinValue: 1
 --- !u!1 &3620323360971090896
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +243,7 @@ GameObject:
   - component: {fileID: 1783258179398513135}
   - component: {fileID: 4602262774851322268}
   - component: {fileID: 8134736891674343647}
-  - component: {fileID: 4743715915598752978}
+  - component: {fileID: 5837022213921302363}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -314,8 +316,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4743715915598752978
-BoxCollider:
+--- !u!135 &5837022213921302363
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -325,5 +327,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9999999, y: 0.17264846, z: 2.0000005}
+  m_Radius: 1.0000002
   m_Center: {x: 0, y: 0, z: 0}

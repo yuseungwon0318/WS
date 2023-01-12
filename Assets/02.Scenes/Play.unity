@@ -504,6 +504,7 @@ MonoBehaviour:
   GetCoinEvent:
     m_PersistentCalls:
       m_Calls: []
+  currentKickboard: {fileID: 0}
   CoinScoreRatio: 3
 --- !u!1 &453520109
 GameObject:
@@ -3460,7 +3461,7 @@ PrefabInstance:
     - target: {fileID: 4092394944620704454, guid: 4c6a56344b8201643b0240fdd14bd26c,
         type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 2.254997
+      value: 1.999995
       objectReference: {fileID: 0}
     - target: {fileID: 4092394944620704457, guid: 4c6a56344b8201643b0240fdd14bd26c,
         type: 3}
@@ -3500,7 +3501,7 @@ PrefabInstance:
     - target: {fileID: 4092394946578768599, guid: 4c6a56344b8201643b0240fdd14bd26c,
         type: 3}
       propertyPath: field of view
-      value: 2.254997
+      value: 1.999995
       objectReference: {fileID: 0}
     - target: {fileID: 4092394946578768600, guid: 4c6a56344b8201643b0240fdd14bd26c,
         type: 3}

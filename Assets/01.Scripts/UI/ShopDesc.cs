@@ -18,6 +18,7 @@ public class ShopDesc : MonoBehaviour
     public Button BuyButton;
     public TextMeshProUGUI BuyButtonText;
     public GameObject Store, Garage;
+    public TextMeshProUGUI SelectText;
     void Start()
     {
         render = GameObject.FindObjectOfType<KickboardRender>();
@@ -68,14 +69,26 @@ public class ShopDesc : MonoBehaviour
             Store.SetActive(true);
         }
         Garage.SetActive(!Store.activeSelf);
+        
 
         render.Data = CurrentBoard;
         render.SetupVisual();
         NameText.text = CurrentBoard.Name;
         DescriptionText.text = CurrentBoard.Description;
         PriceText.text = CurrentBoard.Price + " Coin";
+        CheckSelect();
     }
-
+    public void CheckSelect()
+    {
+        if (KickboardSelecter.Instance.CurrentKickBoard == CurrentBoard)
+        {
+            SelectText.text = "선택중";
+        }
+        else
+        {
+            SelectText.text = "선택하기";
+        }
+    }
     public void ClickBuyBtn()
     {
         if(CurrentBoard.Price <= BuySystem.Instance.own.Coin)

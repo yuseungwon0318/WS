@@ -42,6 +42,7 @@ public class KickboardSelecter : MonoBehaviour
     {
         ShopDesc shop = GameObject.FindObjectOfType<ShopDesc>();
         CurrentKickBoard = shop.CurrentBoard;
+        shop.CheckSelect();
     }
     public void Save()
     {
