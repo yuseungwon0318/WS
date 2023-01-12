@@ -46,11 +46,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        BackendGameData.Instance.GameDataGet();
-        BestScore = BackendGameData.userData.BestScore;
-
-        
-
         Play();
         
         Application.targetFrameRate = 120;
