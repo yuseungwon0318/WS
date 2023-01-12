@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public int CountdownTime = 3;
     public float time;
     public int Score;
-    public int BestScore;
+    public int BestScore = 0;
     public int CurrentCoin;
     public KickboardController player;
     public UnityEvent GameStartEvent;
@@ -46,8 +46,13 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        Play();
+        BackendGameData.Instance.GameDataGet();
+        BestScore = BackendGameData.userData.BestScore;
 
+        
+
+        Play();
+        
         Application.targetFrameRate = 120;
     }
     public void End()
@@ -56,7 +61,20 @@ public class GameManager : MonoBehaviour
     }
     public void CheckScore()
     {
+       
         Score = (int)time + CurrentCoin*CoinScoreRatio;
+        
+        if (BestScore < Score)
+        {
+            PlayerPrefs.SetInt("BestScore", Score);
+            Debug.Log("최고점수 갱신");
+            BackendGameData.Instance.GameDataInsert();
+            BackendRank.Instance.RankInsert(Score);
+            
+            BestScore = Score;
+
+            BackendRank.Instance.RankInsert(GameManager.instance.Score);
+        }
     }
     public void Play()
     {
@@ -86,16 +104,8 @@ public class GameManager : MonoBehaviour
     {
         CheckScore();
 
-        if (BestScore < Score)
-        {
-            BackendGameData.Instance.GameDataInsert();
-            BackendRank.Instance.RankInsert(Score);
-            BestScore = Score;
-
-            BackendRank.Instance.RankInsert(GameManager.instance.Score);
-        }
         BackendRank.Instance.RankGet(); // [추가] 랭킹 불러오기 함수
-
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

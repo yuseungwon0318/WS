@@ -7,11 +7,9 @@ using BackEnd;
 
 public class UserData
 {
-    public int BestScore = GameManager.instance.Score;
-    
-    public Dictionary<string, int> inventory = new Dictionary<string, int>();
-    public List<string> equipment = new List<string>();
 
+    public int BestScore = PlayerPrefs.GetInt("BestScore");
+    
     // 데이터를 디버깅하기 위한 함수입니다.(Debug.Log(UserData);)
     public override string ToString()
     {
@@ -78,7 +76,7 @@ public class BackendGameData
     public void GameDataGet()
     {
         Debug.Log("게임 정보 조회 함수를 호출합니다.");
-        var bro = Backend.GameData.GetMyData("USER_DATA", new Where());
+        var bro = Backend.GameData.GetMyData("BestScore", new Where());
         if (bro.IsSuccess())
         {
             Debug.Log("게임 정보 조회에 성공했습니다. : " + bro);
